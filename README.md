@@ -1,11 +1,16 @@
 # testing-mar28
-Test
 
-module.exports = {
-  extends: ['standard', 'prettier', 'prettier/standard'],
-};
+// before rename
+const x = {
+    y: 'value'
+}
+const { y } = x;
+console.log(y);
 
-module.exports = {
-  singleQuote: true,
-  trailingComma: 'all',
-};
+// after rename
+const x = {
+    z: 'value'
+}
+const { z: y } = x;
+console.log(y);
+
